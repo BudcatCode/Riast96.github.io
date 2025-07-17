@@ -35,11 +35,29 @@ header{
 .nav-link{
     color: white;
     font-size: 1.1em;
+    position: relative;
 }
 
 .nav-link:hover {
     color: white;
     cursor: pointer;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 0%;
+    height: 3px ;
+    background-color: #746bca;
+    transition: width 0.3s ease;
+    border-radius: 50px;
+}
+
+/* esto es para el largo de la barra de los nav-link*/
+.nav-link:hover::after {
+    width: 100%;
 }
 
 /* ============ Main =============== */
